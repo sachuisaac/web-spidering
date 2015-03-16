@@ -79,9 +79,9 @@ end
 @browser = Watir::Browser.new
 @browser.goto 'https://ehr.kareo.com/EhrWebApp/login.html'
 sleep 10
-@browser.text_field(:name => 'userName').set 'shibi.jothy@sunknowledge.com'
+@browser.text_field(:name => 'userName').set ARGV[0]
 
-@browser.text_field(:name => 'password').set 'Kavuvila1209'
+@browser.text_field(:name => 'password').set ARGV[1]
 
 @browser.button().click
 
